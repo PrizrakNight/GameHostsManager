@@ -22,7 +22,7 @@ namespace GameHostsManager.WebApi.Controllers
         /// Returns connection information
         /// </summary>
         [HttpPost("{roomId}/connection-info")]
-        [ProducesResponseType(typeof(List<HostRoomContract>), StatusCodes.Status200OK)]
+        [ProducesResponseType(typeof(HostRoomConnectionInfoContract), StatusCodes.Status200OK)]
         public async Task<IActionResult> GetConnectionInfo(Guid roomId,
             [FromBody] GetConnectionInfoContract contract)
         {
